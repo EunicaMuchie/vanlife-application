@@ -1,0 +1,9 @@
+h1{
+    font-weight: bold;
+}
+
+.btn{
+    text-align: center;
+    font-size: 30px;
+  background-color: rgba(22, 22, 22, 1);  
+}
