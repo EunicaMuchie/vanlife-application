@@ -4,7 +4,7 @@ import './Vans.css'
 const Vans = () => {
   return (
     <div>
-      <h1></h1>
+      <h1>sdfghjlkl</h1>
     </div>
   )
 }

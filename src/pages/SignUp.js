@@ -1,11 +1,11 @@
 import React from 'react'
-import './Sign.css';
+import './SignUp.css';
 //  import './fonts.css'
 
 const SignUp = () => {
     return (
         <div>
-           
+           <>
             <h1 className="content1">Sign Up</h1>
 
             <form className="form-group" >
@@ -14,8 +14,8 @@ const SignUp = () => {
                 <input type="text" placeholder="Password"></input>
                 <button>Submit</button>
             </form>
-
-           
+            <div className='empty2'></div>
+            </>
         </div>
     )
 }
