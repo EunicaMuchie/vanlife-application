@@ -1,0 +1,235 @@
+* {
+    overflow-x: hidden;
+}
+
+#pic {
+    background-image: url('/public/images/roofTop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 90%;
+    padding: 100px;
+}
+
+#AboutH1 {
+    margin-top: 20px;
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#AboutH2 {
+    top: 0px;
+    font-size: 30px;
+    color: black;
+    padding-top: 20px;
+    text-align: start;
+    padding-left: 20px;
+}
+
+#AboutP1 {
+    color: black;
+    font-size: 16px;
+    font-family: regular;
+    font-weight: 600;
+    align-items: start;
+    margin-left: 2%;
+}
+
+#AboutP2 {
+    color: black;
+    font-size: 16px;
+    font-family: regular;
+    font-weight: 600;
+    align-items: start;
+    margin-left: 2%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+#orangeyDiv {
+    height: 26vh;
+    width: 100%;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 19px;
+    background-color: rgb(255, 204, 141);
+    width: 98%;
+    margin-left: 1%;
+}
+
+.ABT .mainButton {
+    color: white;
+    background-color: black;
+    border-radius: 12px;
+    height: 46px;
+    width: 200px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 50px;
+    border-style: none;
+}
+
+@font-face {
+    font-family: regular;
+    src: url('/src/inter/Inter-Regular.otf');
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+    #pic {
+        background-image: url('/public/images/roofTop.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 200px;
+        width: 100%;
+        padding: 10px;
+        margin-left: 0.5px;
+    }
+
+    #AboutH1 {
+        margin-top: 10px;
+        font-size: 26px;
+        width: 90%;
+        color: black;
+        margin-bottom: 20px;
+        margin-left: 5px;
+        text-align: start;
+    }
+
+    #AboutH2 {
+        font-size: 20px;
+        color: black;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    #AboutP1 {
+        color: black;
+        font-size: 12px;
+        font-family: regular;
+        font-weight: 600;
+        width: 90%;
+        align-items: start;
+        margin-left: 25px;
+    }
+
+    #AboutP2 {
+        color: black;
+        font-size: 12px;
+        font-family: regular;
+        font-weight: 600;
+        width: 90%;
+        align-items: start;
+        padding-top: 20px;
+        margin-left: 25px;
+        padding-bottom: 30px;
+    }
+
+    #orangeyDiv {
+        text-align: start;
+        height: 18vh;
+        width: 90%;
+        border-radius: 10px;
+        margin-left: 20px;
+        padding-bottom: 20px;
+        background-color: rgb(255, 204, 141);
+    }
+
+    footer {
+        height: 90px;
+        margin-top: 30px;
+
+        p {
+            margin-top: 30px;
+        }
+    }
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+    #pic {
+        background-image: url('/public/images/roofTop.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 200px;
+        width: 70%;
+        padding: 10px;
+        margin-left: 110px;
+    }
+
+    #AboutH1 {
+        margin-top: 30px;
+        font-size: 32px;
+        text-align: start;
+        color: black;
+        margin-bottom: 20px;
+    }
+
+    #AboutH2 {
+        font-size: 23px;
+        color: black;
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+
+    #AboutP1 {
+        color: black;
+        font-size: 16px;
+        font-family: regular;
+        font-weight: 600;
+        text-align: start;
+    }
+
+    #AboutP2 {
+        color: black;
+        font-size: 16px;
+        font-family: regular;
+        font-weight: 600;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        text-align: start;
+    }
+
+    #orangeyDiv {
+        text-align: start;
+        height: 20vh;
+        width: 94%;
+        border-radius: 10px;
+        margin-bottom: 60px;
+        margin-left: 25px;
+        padding-bottom: 20px;
+        background-color: rgb(255, 204, 141);
+    }
+
+    .ABT .mainButton {
+        color: white;
+        background-color: black;
+        border-radius: 12px;
+        height: 46px;
+        width: 200px;
+        font-weight: 600;
+        font-size: 16px;
+        margin-top: 20px;
+        cursor: pointer;
+        margin-left: 50px;
+        border-style: none;
+    }
+
+    footer {
+        margin-top: 0.2px;
+        height: 80.1px;
+
+        p {
+            margin-top: 25px;
+        }
+    }
+}

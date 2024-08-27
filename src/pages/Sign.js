@@ -1,11 +1,11 @@
 import React from 'react'
 import './Sign.css';
-// import '../inter';
 import { Link } from 'react-router-dom';
 
 
 const Sign = () => {
     return (
+        <>
         <div>
         
             <h1 className="content1">Sign in to your account</h1>
@@ -18,6 +18,8 @@ const Sign = () => {
 
             <p className='p-one'>Don’t have an account? <Link to="/SignUp" id='create'>Create one now</Link></p>
         </div>
+        <div className='empty'></div>
+        </>
     )
 }
 

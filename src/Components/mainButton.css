@@ -1,0 +1,78 @@
+.mainButton {
+    margin-top: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: rgba(255, 140, 56, 1);
+    color: white;
+    padding: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 494.33px;
+    border-style: hidden;
+    overflow-y: hidden;
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .mainButton {
+        margin-top: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: rgba(255, 140, 56, 1);
+        color: white;
+        padding: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        width: 350px;
+        border-style: hidden;
+        overflow-y: hidden;
+    }
+
+    .ABT .mainButton {
+        color: white;
+        background-color: black;
+        border-radius: 12px;
+        height: 46px;
+        width: 175px;
+        font-weight: 600;
+        font-size: 16px;
+        margin-top: 20px;
+        cursor: pointer;
+        margin-left: 30px;
+        border-style: none;
+    }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+    .mainButton {
+        margin-top: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: rgba(255, 140, 56, 1);
+        color: white;
+        padding: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        height: 60px;
+        width: 450px;
+        border-style: hidden;
+        overflow-y: hidden;
+    }
+
+    .ABT .mainButton {
+        color: white;
+        background-color: black;
+        border-radius: 12px;
+        height: 46px;
+        width: 5000px;
+        font-weight: 600;
+        font-size: 16px;
+        margin-top: 20px;
+        cursor: pointer;
+        margin-left: 10px;
+        border-style: none;
+    }
+
+}
