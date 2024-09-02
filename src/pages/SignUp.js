@@ -12,7 +12,7 @@ const SignUp = () => {
             <input type="text" placeholder="Name"></input>
                 <input type="text" placeholder="Email address"></input>
                 <input type="text" placeholder="Password"></input>
-                <button>Submit</button>
+                <button className='sign'>Submit</button>
             </form>
 
            

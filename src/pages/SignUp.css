@@ -1,0 +1,113 @@
+@font-face {
+    font-family: bold;
+    src: url('../inter/Inter-Bold.otf');
+  }
+   
+   body {
+    background-color: rgba(255, 247, 237, 1);  
+    margin: 0;
+  
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 12vh;
+    font-family: bold;
+    font-size: 2em; 
+    padding: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    max-width: 90%; 
+    margin: 0 auto; 
+  }
+  
+  input {
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(209, 213, 219, 1);
+    font-family: regular;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .sign{
+    width: 35%;
+    height: 50px; 
+    background-color: rgba(255, 140, 56, 1);
+    border: none;
+    border-radius: 8px;
+    color: white; 
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+  
+  .empty2{
+    margin-bottom: 120px;
+  }
+  .p-one {
+    text-align: center;
+    margin-top: 20px; 
+  font-size: 17px;
+  font-weight: 700;
+  }
+  
+  #create {
+    color: rgba(255, 140, 56, 1);
+    text-decoration: none; 
+  }
+  
+  #create:hover {
+    text-decoration: underline; 
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5em; 
+      margin-top: 4vh;
+    }
+  
+    .form-group input,
+    .form-group button {
+      width: 63%; 
+    }
+  
+    .form-group {
+      padding: 0 10px; 
+    }
+  
+    .p-one {
+      font-size: 16px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 25px; 
+      margin-top: 15vh;
+    }
+  
+    .form-group input{
+      width: 70%;
+      font-size: 16px;
+    }
+  
+    
+    .form-group button {
+      width: 78%; 
+    }
+  
+    .p-one {
+      font-size: 16px; 
+    }
+  }
+  

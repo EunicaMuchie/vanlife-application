@@ -13,7 +13,7 @@ const Sign = () => {
             <form className="form-group" >
                 <input type="text" placeholder="Email address"></input>
                 <input type="text" placeholder="Password"></input>
-                <button>Sign in</button>
+                <button className='signbtn'>Sign in</button>
             </form>
 
             <p className='p-one'>Don’t have an account? <Link to="/SignUp" id='create'>Create one now</Link></p>
