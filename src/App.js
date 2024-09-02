@@ -3,9 +3,10 @@ import Navbar from './Components/Navbar';
 import Sign from './pages/Sign';
 import Home from './pages/Home';
 import About from './pages/About';
-import Vans from './pages/Vans'; 
+import Vans from './pages/Vans';
 import SignUp from './pages/SignUp';
-
+import Footer from './Components/Footer';
+import MainButton from './Components/MainButton';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 
 function App() {
@@ -13,13 +14,14 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <Routes> 
+        <Routes>
           <Route path="/Home" element={<Home />} />
-          <Route path="/About" element={<About />} />  
-          <Route path="/Vans" element={<Vans />} /> 
+          <Route path="/About" element={<About />} />
+          <Route path="/Vans" element={<Vans />} />
           <Route path="/Sign" element={<Sign />} />
-          <Route path="/SignUp" element={<SignUp />} />  
-        </Routes> 
+          <Route path="/SignUp" element={<SignUp />} />
+        </Routes>
+        <Footer />
       </div>
     </Router>
   );

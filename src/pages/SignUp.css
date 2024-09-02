@@ -37,6 +37,7 @@
     font-weight: 700;
   }
   
+
   .sign{
     width: 35%;
     height: 50px; 
@@ -109,5 +110,4 @@
     .p-one {
       font-size: 16px; 
     }
-  }
-  
+}
