@@ -37,7 +37,8 @@
     font-weight: 700;
   }
   
-  button {
+
+  .sign{
     width: 35%;
     height: 50px; 
     background-color: rgba(255, 140, 56, 1);
@@ -109,5 +110,4 @@
     .p-one {
       font-size: 16px; 
     }
-  }
-  
+}
