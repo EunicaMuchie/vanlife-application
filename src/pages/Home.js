@@ -6,6 +6,7 @@ import MainButton from '../Components/MainButton';
 
 const Home = () => {
     return (
+        // home section
         <section id='sect'>
             <>
                 <h1 id='HomeH1'> You got the travel plans, we got the travel vans. </h1>

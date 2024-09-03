@@ -1,8 +1,4 @@
-@font-face {
-    font-family: bold;
-    src: url('../inter/Inter-Bold.otf');
-  }
-   
+/* SIGN UP PAGE STYLES */
    body {
     background-color: rgba(255, 247, 237, 1);  
     margin: 0;

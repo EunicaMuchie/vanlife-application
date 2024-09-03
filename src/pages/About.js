@@ -2,10 +2,10 @@ import React from 'react'
 import './About.css'
 import { Link } from 'react-router-dom';
 import MainButton from '../Components/MainButton';
-
-
 const About = () => {
     return (
+
+        // About section
         <div>
             <>
                 <div id='pic'></div>

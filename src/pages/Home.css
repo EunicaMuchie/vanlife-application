@@ -4,8 +4,10 @@
     overflow-x: hidden;
 }
 
+
+/* STYLING FOR HOME PAGE */
 #sect {
-    background-image: url('/public/images/background.png');
+    background-image: url('../assets/images/background.png');
     background-size: cover;
     height: 79vh;
     width: auto;
@@ -26,12 +28,7 @@
     padding: 15px;
 }
 
-@font-face {
-    font-family: bold;
-    src: url('/src/inter/Inter-Bold.otf');
-}
-
-/* MEDIA QUERIES */
+/* MEDIA QUERIES FOR IPHONE XR AND IPAD MINI */
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 

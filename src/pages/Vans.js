@@ -4,13 +4,15 @@ import luxuryVan2 from '../assets/images/luxury-van2.png';
 import simpleVan1 from '../assets/images/simple-van1.png';
 import simpleVan2 from '../assets/images/simple-van2.png';
 import ruggedVan1 from '../assets/images/rugged-van1.png';
-import ruggedVan2 from '../assets/images/rugged-van2.png';
+import ruggedVan2 from '../assets/images/simple-van2.png';
 import './Vans.css';
+
+
 
 function Van() {
   const [filter, setFilter] = useState('all');
   const [selectedVan, setSelectedVan] = useState(null);
-
+// this code is for the filter buttons stlying
   const getButtonStyle = (category) => {
     switch (category) {
       case 'Luxury':
@@ -24,6 +26,9 @@ function Van() {
     }
   };
 
+
+
+// main page 
   const images = [
     { src: simpleVan1, alt: 'Modest Explorer', category: 'Simple', price: 60, details: 'A simple and reliable van for your everyday adventures.' },
     { src: ruggedVan2, alt: 'Beach Bum', category: 'Rugged', price: 80, details: 'Perfect for rugged terrains, this van is built for outdoor exploration.' },
@@ -41,6 +46,9 @@ function Van() {
   const handleVanClick = (van) => {
     setSelectedVan(van);
   };
+
+
+// buttons
 
   return (
     <div className="container">
@@ -89,6 +97,8 @@ function Van() {
         ))}
       </div>
 
+
+{/* This the pop up page code  */}
       {selectedVan && (
         <div className="popup">
           <div className="popup-content">

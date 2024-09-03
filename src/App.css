@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'Bold';
-  src: url('./inter/Inter-Bold.otf');
+  src: url('../src/assets/fonts/inter/Inter-Bold.otf');
 }
 
 @font-face {
   font-family: 'Regular';
-  src: url('./inter/Inter-Regular.otf');
+  src: url('../src/assets/fonts/inter/Inter-Regular.otf');
 }
 
 @font-face {
   font-family: 'Light';
-  src: url('./inter/Inter-Light-BETA.otf');
+  src: url('../src/assets/fonts/inter/Inter-Light-BETA.otf');
 }
 
 @font-face {
   font-family: 'Thin';
-  src: url('./inter/Inter-Thin-BETA.otf');
+  src: url('../src/assets/fonts/inter/Inter-Thin-BETA.otf');
 }

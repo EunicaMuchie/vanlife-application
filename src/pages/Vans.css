@@ -1,13 +1,4 @@
-@font-face {
-    font-family: Bold;
-    src: url(../inter/Inter-Bold.otf);
-  }
-  
-  @font-face {
-    font-family: Regular ;
-    src: url(../inter/Inter-Regular.otf);
-  }
-  
+
   body{
     background-color: rgba(255, 247, 237, 1);
   }
@@ -89,7 +80,7 @@
     flex-direction: column;
     text-align: center;
     background-color: rgba(255, 247, 237, 1);
-    box-shadow: none; /* Removed card-like shadow */
+    box-shadow: none; 
     max-width: 600px;
     margin: 0 auto;
   }
@@ -304,11 +295,11 @@
   
     .van-details img {
       width: 30vh;
-      max-height: 40vh; /* Reduce the image height further */
+      max-height: 40vh;
       margin-right: 0;
       border-radius: 2%;
-      margin-bottom: px; /* Reduce margin between image and details */ 
-      margin-bottom: px; /* Add space between the image and the details */
+      margin-bottom: px; 
+      margin-bottom: px; 
     }
   
     .van-info {
@@ -341,8 +332,8 @@
     }
   
     .rent-button {
-      width: 30vh; /* Reduce the button width for mobile */
-      margin-top: 10px; /* Reduce the space above the button */
+      width: 30vh; 
+      margin-top: 10px;
       margin-left: 10px;
     }
   }
@@ -396,8 +387,8 @@
   
   @media (max-width: 575.98px) {
     .popup-content {
-        max-width: 70%; /* Reduce the maximum width to make the pop-up smaller */
-        max-height: 77%;/* Reduce the padding for mobile devices */
+        max-width: 70%;
+        max-height: 77%;
     }
   
     .van-details {
@@ -406,23 +397,23 @@
     }
   
     .van-details img {
-      width: 90%; /* Reduce image width */
-      max-height: 30vh; /* Adjust image height */
-      margin-bottom: 15px; /* Add space below the image */
+      width: 90%; 
+      max-height: 30vh;
+      margin-bottom: 15px; 
     }
   
     .van-info {
-      width: 100%; /* Full width for info */
-      font-size: 12px; /* Reduce font size */
+      width: 100%; 
+      font-size: 12px; 
     }
   
     .rent-button {
-      width: 99%; /* Reduce button width */
+      width: 99%; 
       margin-top: 15px;
     }
   
     .back-button {
-      font-size: 12px; /* Adjust font size */
+      font-size: 12px; 
       margin-right: 0;
     }
   }

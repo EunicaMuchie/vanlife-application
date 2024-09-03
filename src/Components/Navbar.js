@@ -1,15 +1,15 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import profileImage from '../assets/images/Profile1.png'; 
 import './Navbar.css';
 
 
 
-
+// NAVBAR
 const Navbar = () => {
   const location = useLocation();
   const pathname = location.pathname;
-
   return (
     <nav>
       <Link to="/Home"><h2>#CarRental</h2></Link>
@@ -25,7 +25,9 @@ const Navbar = () => {
         </li>
         <li className={pathname === '/Sign' ? 'active' : ''}>
           <Link to="/Sign" className={pathname === '/Sign' ? 'active' : ''}>
-            <img className='profile' src="./images/Profile1.png" alt="Profile" />
+        <img className='profile' src={profileImage} alt='profile' />
+
+
           </Link>
         </li>
       </ul>
@@ -35,3 +37,4 @@ const Navbar = () => {
 
 export default Navbar;
 
+// END OF NAVBAR

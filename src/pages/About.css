@@ -2,8 +2,9 @@
     overflow-x: hidden;
 }
 
+/* STYLING FOR ABOUT PAGE */
 #pic {
-    background-image: url('/public/images/roofTop.png');
+    background-image: url('../assets/images/roofTop.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
@@ -74,12 +75,8 @@
     border-style: none;
 }
 
-@font-face {
-    font-family: regular;
-    src: url('/src/inter/Inter-Regular.otf');
-}
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES FOR IPHONE XR AND IPAD MINI*/
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 
