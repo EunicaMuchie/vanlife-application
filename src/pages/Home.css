@@ -7,7 +7,7 @@
 
 /* STYLING FOR HOME PAGE */
 #sect {
-    background-image: url('../assets/images/background.png');
+    background-image: url('../../src/assets/images/background.png');
     background-size: cover;
     height: 79vh;
     width: auto;
@@ -33,7 +33,7 @@
 @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 
     #sect {
-        background-image: url('/public/images/background.png');
+        background-image: url('../../src/assets/images/background.png');
         background-size: cover;
         height: 710px;
         margin-bottom: -30px;
@@ -56,7 +56,7 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
     #sect {
-        background-image: url('/public/images/background.png');
+        background-image: url('../../src/assets/images/background.png');
         background-size: cover;
         height: 82vh;
         margin-bottom: 0.1px;

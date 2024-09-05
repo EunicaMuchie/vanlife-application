@@ -5,7 +5,6 @@
 }
 /* NAVBAR STYLES */
 nav {
-  background-color: rgba(255, 139, 24, 0.068); 
   padding: 20px;
   display: flex;
   justify-content: space-between; 
