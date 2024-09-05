@@ -24,43 +24,34 @@ ChartJS.register(
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
+  const [showVanPopup, setShowVanPopup] = useState(false);
+  const [vanData, setVanData] = useState({ image: '', name: '', price: '' });
+
+  const openVanPopup = (vanImage, vanName, vanPrice) => {
+    setVanData({ image: vanImage, name: vanName, price: vanPrice });
+    setShowVanPopup(true);
+  };
+
+  const closeVanPopup = () => {
+    setShowVanPopup(false);
+  };
 
   return (
     <div className="dashboard-container">
       <header className="dashboard-header">
         <nav>
           <ul>
-            <li
-              className={activeTab === 'dashboard' ? 'active' : ''}
-              onClick={() => setActiveTab('dashboard')}
-            >
-              Dashboard
-            </li>
-            <li
-              className={activeTab === 'income' ? 'active' : ''}
-              onClick={() => setActiveTab('income')}
-            >
-              Income
-            </li>
-            <li
-              className={activeTab === 'vans' ? 'active' : ''}
-              onClick={() => setActiveTab('vans')}
-            >
-              Vans
-            </li>
-            <li
-              className={activeTab === 'reviews' ? 'active' : ''}
-              onClick={() => setActiveTab('reviews')}
-            >
-              Reviews
-            </li>
+            <li className={activeTab === 'dashboard' ? 'active' : ''} onClick={() => setActiveTab('dashboard')}>Dashboard</li>
+            <li className={activeTab === 'income' ? 'active' : ''} onClick={() => setActiveTab('income')}>Income</li>
+            <li className={activeTab === 'vans' ? 'active' : ''} onClick={() => setActiveTab('vans')}>Vans</li>
+            <li className={activeTab === 'reviews' ? 'active' : ''} onClick={() => setActiveTab('reviews')}>Reviews</li>
           </ul>
         </nav>
       </header>
 
+      {/* Dashboard Tab */}
       {activeTab === 'dashboard' && (
         <section className="dashboard-welcome">
-
           <div className="income">
             <h1 id='HONE'>Welcome!</h1>
             <p>Income last <span className="highlight">30 days</span>   <a href="#details" id='details'>Details</a></p>
@@ -100,16 +91,15 @@ const Dashboard = () => {
               <button id='edit'>Edit</button>
             </div>
           </section>
+
         </section>
       )}
 
+      {/* Income Tab */}
       {activeTab === 'income' && (
-
-
-        <>
-          <div id="sport2">
-            <section className="Income">
-              <div className="first-three-titles">
+        <section className="income">
+          
+          <div className="first-three-titles">
                 <h2>Income </h2>
               <p className='para'> <span>Last</span><span  id='last'>  30 Days</span></p> 
                <div className='Dollar'> <h1 className='money'>$2,260</h1></div>
@@ -138,43 +128,41 @@ const Dashboard = () => {
                 <h3>$890</h3>
                 <p className="txxt">23/11/22</p>
               </div>
-            </section>
-          </div>
 
-        </>)}
-
-      {activeTab === 'vans' && (
-        <section className="vans-list">
-
-          <h2>Your listed vans <span id='view-all'> View all</span></h2>
-
-          <div className="van">
-            <img src={image54} alt="Modest Explorer" />
-            <div className='four'>  <p className='Van-Titles'>Modest Explorer</p>
-              <p id='p-one'>$60/day</p>
-            </div>
-
-            <button id='edit'>Edit</button>
-          </div>
-          <div className="van">
-            <img src={image55} alt="Modest Explorer" />
-            <div className='four'>  <p className='Van-Titles'>Beach Bum</p>
-              <p id='p-one'>$80/day</p></div>
-
-            <button id='edit'><span className='colorless'>.......</span>Edit</button>
-          </div>
-          <div className="van">
-            <img src={image57} alt="Modest Explorer" />
-            <div className='four'>  <p className='Van-Titles'>Green Wonder</p>
-              <p id='p-one'>$70/day</p></div>
-
-            <button id='edit'>Edit</button>
-          </div>
+          {/* Income tab-related content here */}
         </section>
-
       )}
 
-      {activeTab === 'reviews' && (
+      {/* Vans Tab */}
+      {activeTab === 'vans' && (
+        <section className="vans-list">
+          <h2>Your listed vans <span id='view-all'> View all</span></h2>
+
+          <div className="van" onClick={() => openVanPopup(image54, "Modest Explorer", "$60/day")}>
+            <img src={image54} alt="Modest Explorer" />
+            <div className='four'>
+              <p className='Van-Titles'>Modest Explorer</p>
+              <p id='p-one'>$60/day</p>
+            </div>
+          </div>
+          <div className="van" onClick={() => openVanPopup(image55, "Beach Bum", "$80/day")}>
+            <img src={image55} alt="Beach Bum" />
+            <div className='four'>
+              <p className='Van-Titles'>Beach Bum</p>
+              <p id='p-one'>$80/day</p>
+            </div>
+          </div>
+          <div className="van" onClick={() => openVanPopup(image57, "Green Wonder", "$70/day")}>
+            <img src={image57} alt="Green Wonder" />
+            <div className='four'>
+              <p className='Van-Titles'>Green Wonder</p>
+              <p id='p-one'>$70/day</p>
+            </div>
+          </div>
+        </section>
+      )}
+
+{activeTab === 'reviews' && (
         <section>
 
           <div id="sport4">
@@ -272,6 +260,26 @@ const Dashboard = () => {
             </div>
           </div>
         </section>
+      )}
+
+
+      {/* Van Popup */}
+      {showVanPopup && (
+        <div className="van-popup-overlay" onClick={closeVanPopup}>
+          <div className="van-popup" onClick={(e) => e.stopPropagation()}>
+            <div className="van-popup-header">
+              <span className="back-to-vans" onClick={closeVanPopup}>← Back to Vans</span>
+            </div>
+            <div className="van-popup-content">
+              <img src={vanData.image} alt={vanData.name} className="popup-van-image" />
+              <div className="van-details-right">
+                <button className="van-simple-btn">Simple</button>
+                <p className="van-name">{vanData.name}</p>
+                <p className="van-price">{vanData.price}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
