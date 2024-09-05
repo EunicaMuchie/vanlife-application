@@ -7,6 +7,7 @@ import Vans from './pages/Vans';
 import SignUp from './pages/SignUp';
 import Footer from './Components/Footer';
 import MainButton from './Components/MainButton';
+import Host from './pages/Host'
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/Home" element={<Home />} />
+          <Route path="/Host" element={<Host />} />
           <Route path="/About" element={<About />} />
           <Route path="/Vans" element={<Vans />} />
           <Route path="/Sign" element={<Sign />} />

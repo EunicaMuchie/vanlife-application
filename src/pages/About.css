@@ -4,7 +4,7 @@
 
 /* STYLING FOR ABOUT PAGE */
 #pic {
-    background-image: url('../assets/images/roofTop.png');
+    background-image: url('../../src/assets/images/roofTop.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
@@ -81,7 +81,7 @@
 @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 
     #pic {
-        background-image: url('/public/images/roofTop.png');
+        background-image: url('../../src/assets/images/roofTop.png');
         background-repeat: no-repeat;
         background-size: cover;
         height: 200px;
@@ -153,7 +153,7 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
     #pic {
-        background-image: url('/public/images/roofTop.png');
+        background-image: url('../../src/assets/images/roofTop.png');
         background-repeat: no-repeat;
         background-size: cover;
         height: 200px;
