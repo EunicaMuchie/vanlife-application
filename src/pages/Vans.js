@@ -12,7 +12,7 @@ import './Vans.css';
 function Van() {
   const [filter, setFilter] = useState('all');
   const [selectedVan, setSelectedVan] = useState(null);
-// this code is for the filter buttons stlying
+  // this code is for the filter buttons stlying
   const getButtonStyle = (category) => {
     switch (category) {
       case 'Luxury':
@@ -28,11 +28,11 @@ function Van() {
 
 
 
-// main page 
+  // main page 
   const images = [
     { src: simpleVan1, alt: 'Modest Explorer', category: 'Simple', price: 60, details: 'A simple and reliable van for your everyday adventures.' },
     { src: ruggedVan2, alt: 'Beach Bum', category: 'Rugged', price: 80, details: 'Perfect for rugged terrains, this van is built for outdoor exploration.' },
-    { src: luxuryVan2, alt: 'Reliable Red', category: 'Luxury', price: 100, details: 'Travel in style with this high-end, fully-equipped luxury van.' }, 
+    { src: luxuryVan2, alt: 'Reliable Red', category: 'Luxury', price: 100, details: 'Travel in style with this high-end, fully-equipped luxury van.' },
     { src: simpleVan2, alt: 'Dream Finder', category: 'Simple', price: 65, details: 'An affordable van with all the essentials for your journey.' },
     { src: luxuryVan1, alt: 'The Cruiser', category: 'Luxury', price: 120, details: 'This van offers a luxurious escape into nature with top-tier amenities.' },
     { src: ruggedVan1, alt: 'Green Wonder', category: 'Rugged', price: 70, details: 'Ready to tackle the toughest roads, this van is your ultimate adventure companion.' },
@@ -48,7 +48,7 @@ function Van() {
   };
 
 
-// buttons
+  // buttons
 
   return (
     <div className="container">
@@ -91,33 +91,33 @@ function Van() {
                 <h3>{image.alt}</h3>
                 <p className="price">${image.price} <span className="price-day">/day</span></p>
               </div>
-              <button className={ image.category.toLowerCase()}>{image.category}</button>
+              <button className={image.category.toLowerCase()}>{image.category}</button>
             </div>
           </div>
         ))}
       </div>
 
 
-{/* This the pop up page code  */}
+      {/* This the pop up page code  */}
       {selectedVan && (
         <div className="popup">
           <div className="popup-content">
             <div className="back-button" onClick={() => setSelectedVan(null)}>← Back to all vans</div>
-            <div className="van-details">
+            <div className="popvan-details">
               <img src={selectedVan.src} alt={selectedVan.alt} />
               <div className="van-info">
                 <div className='van-popbtn'>
-                <h2 className={selectedVan.category.toLowerCase()}>{selectedVan.category}</h2>
+                  <h2 className={selectedVan.category.toLowerCase()}>{selectedVan.category}</h2>
                 </div>
                 <h2 className='van-name' >{selectedVan.alt}</h2>
-                
-                 <p className='van-price' >${selectedVan.price}/day</p>
-              <p className='van-deets'>{selectedVan.details}</p>
-              <button className="rent-button">Rent this van</button>
+
+                <p className='van-price' >${selectedVan.price}/day</p>
+                <p className='van-deets'>{selectedVan.details}</p>
+                <button className="rent-button">Rent this van</button>
               </div>
-             
+
             </div>
-            
+
           </div>
         </div>
       )}
@@ -128,6 +128,6 @@ function Van() {
 
 export default Van;
 
-             
-            
+
+
 

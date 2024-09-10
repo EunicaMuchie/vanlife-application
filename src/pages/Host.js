@@ -25,10 +25,11 @@ ChartJS.register(
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [showVanPopup, setShowVanPopup] = useState(false);
-  const [vanData, setVanData] = useState({ image: '', name: '', price: '' });
+  const [vanData, setVanData] = useState({ image: '', name: '', price: '', description: '', features: [], contact: '' });
+  const [activePopupTab, setActivePopupTab] = useState('description'); // Added state for popup tabs
 
   const openVanPopup = (vanImage, vanName, vanPrice) => {
-    setVanData({ image: vanImage, name: vanName, price: vanPrice });
+    setVanData({ image: vanImage, name: vanName, price: vanPrice, description: 'Description text here', features: ['Feature 1', 'Feature 2'], contact: 'Contact info here' });
     setShowVanPopup(true);
   };
 
@@ -54,82 +55,69 @@ const Dashboard = () => {
         <section className="dashboard-welcome">
           <div className="income">
             <h1 id='HONE'>Welcome!</h1>
-            <p>Income last <span className="highlight">30 days</span>   <a href="#details" id='details'>Details</a></p>
+            <p>Income last <span className="highlight">30 days</span> <a href="#details" id='details'>Details</a></p>
             <p className="income-amount">$2,260</p>
-
           </div>
           <div className="review-score">
-            <h4>Review score  <span className="star">★</span> 5.0 <span id='five'>/5</span>  <a href="#details" id='detail'>Details</a></h4>
-
-
-
+            <h4>Review score <span className="star">★</span> 5.0 <span id='five'>/5</span> <a href="#details" id='detail'>Details</a></h4>
           </div>
           <section className="vans-list">
-
             <h2>Your listed vans <span id='view-all'> View all</span></h2>
-
-            <div className="van">
+            <div className="van" onClick={() => openVanPopup(image54, "Modest Explorer", "$60/day")}>
               <img src={image54} alt="Modest Explorer" />
-              <div className='four'>  <p className='Van-Titles'>Modest Explorer</p>
+              <div className='four'>
+                <p className='Van-Titles'>Modest Explorer</p>
                 <p id='p-one'>$60/day</p>
               </div>
-
               <button id='edit'>Edit</button>
             </div>
-            <div className="van">
-              <img src={image55} alt="Modest Explorer" />
-              <div className='four'>  <p className='Van-Titles'>Beach Bum</p>
-                <p id='p-one'>$80/day</p></div>
-
+            <div className="van" onClick={() => openVanPopup(image55, "Beach Bum", "$80/day")}>
+              <img src={image55} alt="Beach Bum" />
+              <div className='four'>
+                <p className='Van-Titles'>Beach Bum</p>
+                <p id='p-one'>$80/day</p>
+              </div>
               <button id='edit'><span className='colorless'>.......</span>Edit</button>
             </div>
-            <div className="van">
-              <img src={image57} alt="Modest Explorer" />
-              <div className='four'>  <p className='Van-Titles'>Green Wonder</p>
-                <p id='p-one'>$70/day</p></div>
-
+            <div className="van" onClick={() => openVanPopup(image57, "Green Wonder", "$70/day")}>
+              <img src={image57} alt="Green Wonder" />
+              <div className='four'>
+                <p className='Van-Titles'>Green Wonder</p>
+                <p id='p-one'>$70/day</p>
+              </div>
               <button id='edit'>Edit</button>
             </div>
           </section>
-
         </section>
       )}
 
       {/* Income Tab */}
       {activeTab === 'income' && (
         <section className="income">
-          
           <div className="first-three-titles">
-                <h2>Income </h2>
-              <p className='para'> <span>Last</span><span  id='last'>  30 Days</span></p> 
-               <div className='Dollar'> <h1 className='money'>$2,260</h1></div>
-              </div>
-
-              {/* Imported graph */}
-              <Graph />
-
-              {/* Last section */}
-              <div className="first-part">
-                <h4>Your transactions (3)  </h4>
-                <p id="your-transaction-30days"><span className='day'>Last 30 Days</span></p>
-              </div>
-
-              <div className="inner-div">
-                <h3>
-                  $720 <span id="zero"></span>
-                </h3>
-                <p className="txxt">01/12/22</p>
-              </div>
-              <div className="inner-div">
-                <h3>$560</h3>
-                <p className="txxt">10/11/22</p>
-              </div>
-              <div className="inner-div">
-                <h3>$890</h3>
-                <p className="txxt">23/11/22</p>
-              </div>
-
-          {/* Income tab-related content here */}
+            <h2>Income </h2>
+            <p className='para'> <span>Last</span><span id='last'>  30 Days</span></p>
+            <div className='Dollar'> <h1 className='money'>$2,260</h1></div>
+          </div>
+          {/* Imported graph */}
+          <Graph />
+          {/* Last section */}
+          <div className="first-part">
+            <h4>Your transactions (3)  </h4>
+            <p id="your-transaction-30days"><span className='day'>Last 30 Days</span></p>
+          </div>
+          <div className="inner-div">
+            <h3>$720 <span id="zero"></span></h3>
+            <p className="txxt">01/12/22</p>
+          </div>
+          <div className="inner-div">
+            <h3>$560</h3>
+            <p className="txxt">10/11/22</p>
+          </div>
+          <div className="inner-div">
+            <h3>$890</h3>
+            <p className="txxt">23/11/22</p>
+          </div>
         </section>
       )}
 
@@ -137,7 +125,6 @@ const Dashboard = () => {
       {activeTab === 'vans' && (
         <section className="vans-list">
           <h2>Your listed vans <span id='view-all'> View all</span></h2>
-
           <div className="van" onClick={() => openVanPopup(image54, "Modest Explorer", "$60/day")}>
             <img src={image54} alt="Modest Explorer" />
             <div className='four'>
@@ -162,7 +149,8 @@ const Dashboard = () => {
         </section>
       )}
 
-{activeTab === 'reviews' && (
+      {/* Reviews Tab */}
+      {activeTab === 'reviews' && (
         <section>
 
           <div id="sport4">
@@ -173,8 +161,8 @@ const Dashboard = () => {
               </h2>
               <div className="overall-rating">
                 <span className="rating-number">5.0 <span id='starrs'> ★</span>  <span className="total-reviews">overall rating</span></span>
-               
-               
+
+
               </div>
 
               <div className="rating-bar">
@@ -270,13 +258,64 @@ const Dashboard = () => {
             <div className="van-popup-header">
               <span className="back-to-vans" onClick={closeVanPopup}>← Back to Vans</span>
             </div>
-            <div className="van-popup-content">
+            <div className='divSplit'>
               <img src={vanData.image} alt={vanData.name} className="popup-van-image" />
-              <div className="van-details-right">
+              <div className="van-details">
                 <button className="van-simple-btn">Simple</button>
                 <p className="van-name">{vanData.name}</p>
                 <p className="van-price">{vanData.price}</p>
+                {/* Popup Tabs Navigation */}
               </div>
+            </div>
+            <div className="van-popup-content">
+              <div className="popup-tabs">
+                <span
+                  className={`popup-tab ${activePopupTab === 'details' ? 'active' : ''}`}
+                  onClick={() => setActivePopupTab('details')}
+                >
+                  Details
+                </span>
+                <span
+                  className={`popup-tab ${activePopupTab === 'pricing' ? 'active' : ''}`}
+                  onClick={() => setActivePopupTab('pricing')}
+                >
+                  Pricing
+                </span>
+                <span
+                  className={`popup-tab ${activePopupTab === 'photos' ? 'active' : ''}`}
+                  onClick={() => setActivePopupTab('photos')}
+                >
+                  Photos
+                </span>
+              </div>
+
+              {/* Popup Tabs Content */}
+              <div className="popup-tab-content">
+
+                {activePopupTab === 'details' && (
+
+                  <div className="popup-tab-details">
+
+                    <p><strong>Name:</strong> {vanData.name}</p>
+                    <p><strong>Category:</strong> Simple {vanData.category}</p>
+                    <p><strong>Description:</strong> The Modest Explorer is a van designed to get you out of the house and into nature.
+                      This beauty is equipped with solar panels, a composting or even longer!</p>
+                    <p><strong>Visibility:</strong> Public{vanData.visibility}</p>
+                  </div>
+
+                )}
+                {activePopupTab === 'pricing' && (
+                  <div className="popup-tab-pricing">
+                    <p>$60.00 <span>per day</span></p>
+                  </div>
+                )}
+                {activePopupTab === 'photos' && (
+                  <div className="popup-tab-photos">
+                    <img src="../src/assets/images/image_54.png" alt="Van" />
+                  </div>
+                )}
+              </div>
+
             </div>
           </div>
         </div>

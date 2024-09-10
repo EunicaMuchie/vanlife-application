@@ -1,793 +1,878 @@
-
-
 body {
-  
-    /* background: rgba(255, 247, 237, 1); */
-    margin: 0;
-    padding: 0;
-  }
-  
 
+  /* background: rgba(255, 247, 237, 1); */
+  margin: 0;
+  padding: 0;
+}
+
+
+.dashboard-header ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-header li {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 10px;
+
+}
+
+.dashboard-header li.active,
+.dashboard-header li:hover {
+  text-decoration: underline 3px rgba(22, 22, 22, 1);
+
+}
+
+.dashboard-welcome h1 {
+  margin-top: 0;
+  font-size: 36px;
+  color: #333;
+  margin-left: -1018px;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.income {
+  background: rgba(255, 234, 208, 1);
+  /* width: 100%;
+    max-width: 500%; */
+  margin-left: -20px;
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+.income-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.income p {
+  margin-left: 30px;
+}
+
+.income-header .details-link {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.income-amount {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+.review-score {
+  background-color: rgba(255, 221, 178, 1);
+  font-size: 20px;
+  height: 10vh;
+  padding: 50px 50px 70px 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -16px;
+}
+
+.highlight {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.star {
+  color: orange;
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.vans-list {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.vans-list h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #333;
+  margin-left: 20px;
+}
+
+.vans-list a {
+  float: right;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.van {
+  background: rgba(255, 255, 255, 1);
+  height: 15vh;
+  width: 183vh;
+  margin-left: 20px;
+  padding: 15px 15px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+.van .four {
+  margin-left: 50px;
+
+}
+
+.Van-Titles {
+  font-weight: bold;
+}
+
+.colorless {
+  color: transparent;
+}
+
+.van button {
+  margin-left: 650px;
+}
+
+.van img {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  margin-left: 20px;
+  text-align: start;
+}
+
+.van-details {
+  display: flex;
+  align-items: center;
+}
+
+.van-details p {
+  margin: 0;
+  margin-left: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.van a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 234, 208, 1);
+}
+
+.van a:hover {
+  background-color: rgba(255, 221, 178, 1);
+}
+
+#view-all {
+  text-align: right;
+  margin-top: -30px;
+  font-size: 16px;
+  margin-left: 910px;
+}
+
+#edit {
+  border-style: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#five {
+  font-family: regular;
+}
+
+#details {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin-left: 950px;
+
+}
+
+#detail {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin-left: 920px;
+  text-wrap: wrap;
+}
+
+.van-popup-content {
+  height: 50vh;
+  /* display: flex; */
+  position: relative;
+}
+
+
+.popup-van-image {
+  width: 60%;
+  height: auto;
+  border-radius: 8px;
+
+}
+
+.van-details {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 20px;
+  position: relative;
+  right: -130px;
+}
+
+.popup-tabs {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  top: 170px;
+  left: 0;
+  margin-top: -100px;
+}
+
+.popup-tab {
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.popup-tab.active {
+  color: rgba(22, 22, 22, 1);
+  border-bottom: 2px solid rgba(22, 22, 22, 1);
+}
+
+.popup-tab-content {
+  margin-top: 10px;
+}
+
+.popup-tab-photos {
+  margin-top: 90px;
+}
+
+.popup-tab-details {
+  margin-top: 90px;
+  /* padding-bottom: 20px; */
+
+}
+
+.divSplit {
+  display: flex;
+}
+
+.popup-tab-pricing p {
+  list-style-type: none;
+  margin-top: 90px;
+  padding: 0;
+}
+
+.popup-tab-pricing li {
+  margin: 5px 0;
+}
+
+.van-simple-btn,
+.van-name,
+.van-price {
+  margin-bottom: 10px;
+  /* Space between elements */
+  font-weight: bold;
+  /* Make text stand out */
+}
+
+/* Media Queries for Mobile Devices */
+
+/* For devices with a max width of 414px (e.g., iPhone XR) */
+@media screen and (max-width: 414px) {
   .dashboard-header ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .dashboard-header li {
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px 10px;
-    border-radius: 10px;
 
+  #HONE {
+    margin-left: -100px;
   }
-  
-  .dashboard-header li.active,
-  .dashboard-header li:hover {
-    text-decoration: underline 3px rgba(22, 22, 22, 1);
-  
+
+  .review-score {
+    font-size: 18px;
+    height: auto;
+    padding: 20px;
   }
-  
-  
-  
+
+  .van img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .van button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+
+}
+
+/* For devices with a max width of 768px (e.g., iPad Mini) */
+@media screen and (max-width: 768px) {
+  .dashboard-header ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
   .dashboard-welcome h1 {
     margin-top: 0;
     font-size: 36px;
     color: #333;
-    margin-left: -1018px;
+    margin-left: -455px;
     font-size: 50px;
     margin-bottom: 20px;
   }
-  
-  .income {
-    background: rgba(255, 234, 208, 1);
-    /* width: 100%;
-    max-width: 500%; */
-    margin-left: -20px;
-    padding: 20px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  
-  }
-  
-  .income-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .income p {
-    margin-left: 30px;
-  }
-  
-  .income-header .details-link {
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
+
   .income-amount {
-    font-size: 48px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 20px;
+    font-size: 44px;
   }
-  
+
   .review-score {
-    background-color: rgba(255, 221, 178, 1);
     font-size: 20px;
-    height: 10vh;
-    padding: 50px 50px 70px 50px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: -16px;
+    height: auto;
+    padding: 30px;
   }
-  
-  .highlight {
-    font-weight: bold;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  
-  .star {
-    color: orange;
-    font-size: 24px;
-    margin-left: 5px;
-  }
-  
-  .vans-list {
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  
-  .vans-list h2 {
-    margin: 0 0 10px;
-    font-size: 24px;
-    color: #333;
-    margin-left: 20px;
-  }
-  
-  .vans-list a {
-    float: right;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
+
   .van {
-    background: rgba(255, 255, 255, 1);
-    height: 15vh;
-    width: 183vh;
-    margin-left: 20px;
-    padding: 15px 15px;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  
-  .van .four {
-    margin-left: 50px;
-  
-  }
-  
-  .Van-Titles {
-    font-weight: bold;
-  }
-  
-  .colorless {
-    color: transparent;
-  }
-  
-  .van button {
-    margin-left: 650px;
-  }
-  
-  .van img {
-    width: 100px;
-    height: 100px;
-    border-radius: 15px;
-    margin-left: 20px;
-    text-align: start;
-  }
-  
-  .van-details {
-    display: flex;
-    align-items: center;
-  }
-  
-  .van-details p {
-    margin: 0;
-    margin-left: 10px;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .van a {
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: rgba(255, 234, 208, 1);
-  }
-  
-  .van a:hover {
-    background-color: rgba(255, 221, 178, 1);
-  }
-  
-  #view-all {
-    text-align: right;
-    margin-top: -30px;
-    font-size: 16px;
-    margin-left: 910px;
-  }
-  
-  #edit {
-    border-style: none;
-    background-color: transparent;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  #five {
-    font-family: regular;
-  }
-  
-  #details {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-    margin-left: 950px;
-  
-  }
-  
-  #detail {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-    margin-left: 920px;
-    text-wrap: wrap;
-  }
-  
-  /* Media Queries for Mobile Devices */
-  
-  /* For devices with a max width of 414px (e.g., iPhone XR) */
-  @media screen and (max-width: 414px) {
-    .dashboard-header ul {
-      flex-direction: column;
-      align-items: flex-start;
-    }
- 
-    #HONE{
-            margin-left:-100px;
-    }
-
-    .review-score {
-      font-size: 18px;
-      height: auto;
-      padding: 20px;
-    }
-
-    .van img {
-      width: 80px;
-      height: 80px;
-    }
-  
-    .van button {
-      margin-left: 0;
-      margin-top: 10px;
-    }
-  
-  
-  }
-  
-  /* For devices with a max width of 768px (e.g., iPad Mini) */
-  @media screen and (max-width: 768px) {
-    .dashboard-header ul {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-
-    .dashboard-welcome h1 {
-        margin-top: 0;
-        font-size: 36px;
-        color: #333;
-        margin-left:-455px;
-        font-size: 50px;
-        margin-bottom: 20px;
-      }
-    .income-amount {
-      font-size: 44px;
-    }
-  
-    .review-score {
-      font-size: 20px;
-      height: auto;
-      padding: 30px;
-    }
-  .van{
     width: 65vh;
     margin-left: 15px;
   }
-    .van img {
-      width: 90px;
-      height: 90px;
-    }
-  
-    .van button {
-      margin-left: auto;
-      margin-top: 0;
-    }
 
-    #view-all,
-    #details,
-    #detail {
-      text-align: right;
-      margin-left: 60px;
-      font-size: 17px;
-    }
-  
-    .highlight {
-      padding: 0 20px;
-    }
+  .van img {
+    width: 90px;
+    height: 90px;
   }
-  
-  
-  
-  
-  /* Kory's Income Section Styling */
-  
-  .Income {
-    height: auto;
-    width: auto;
-  }
-  
-  .first-three-titles p {
-    margin-left: 1.5%;
-    color: rgb(95, 95, 95);
-    padding: 20px 0px;
-  }
-  
-  .first-three-titles span {
-    color: rgb(95, 95, 95);
-    text-decoration: underline;
-  }
-  
-  .first-three-titles h2 {
-    margin-left: 1.2%;
-    font-size: 40px;
-  }
-  
-  .first-part {
-    display: flex;
-  }
-  
-  .first-part #your-transaction-30days {
-    color: rgb(95, 95, 95);
-    margin-left: 920px;
-    margin-top: 40px;
-  }
-  
-  .first-part h4 {
-    font-size: 20px;
-    margin-left: 2.5%;
-    margin-top: 20px;
-    margin-bottom: 22px;
-    padding: 20px 20px;
-  }
-  
-  .inner-div {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    padding: 20px 20px 20px 20px;
-    margin-bottom: 12px;
-    height: 40px;
-    margin-left: 2.5%;
-    font-size: 20px;
-    border-radius: 12px;
-    width: 93%;
-  }
-  
-  .txxt {
+
+  .van button {
     margin-left: auto;
+    margin-top: 0;
   }
-  
-  .money {
-    font-weight: bold;
-    margin-left: -1200px;
+
+  #view-all,
+  #details,
+  #detail {
+    text-align: right;
+    margin-left: 60px;
+    font-size: 17px;
+  }
+
+  .highlight {
+    padding: 0 20px;
+  }
+}
+
+
+
+
+/* Kory's Income Section Styling */
+
+.Income {
+  height: auto;
+  width: auto;
+}
+
+.first-three-titles p {
+  margin-left: 1.5%;
+  color: rgb(95, 95, 95);
+  padding: 20px 0px;
+}
+
+.first-three-titles span {
+  color: rgb(95, 95, 95);
+  text-decoration: underline;
+}
+
+.first-three-titles h2 {
+  margin-left: 1.2%;
+  font-size: 40px;
+}
+
+.first-part {
+  display: flex;
+}
+
+.first-part #your-transaction-30days {
+  color: rgb(95, 95, 95);
+  margin-left: 920px;
+  margin-top: 40px;
+}
+
+.first-part h4 {
+  font-size: 20px;
+  margin-left: 2.5%;
+  margin-top: 20px;
+  margin-bottom: 22px;
+  padding: 20px 20px;
+}
+
+.inner-div {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 12px;
+  height: 40px;
+  margin-left: 2.5%;
+  font-size: 20px;
+  border-radius: 12px;
+  width: 93%;
+}
+
+.inner-div p {
+  margin-left: 1100px;
+}
+
+.money {
+  font-weight: bold;
+  margin-left: -1200px;
+  margin-top: -8px;
+}
+
+.para {
+  margin-left: 40px;
+
+}
+
+#last {
+  font-weight: bold;
+}
+
+/* MEDIA QUIERIES */
+
+/* Iphone xr */
+
+@media only screen and (max-width: 414px) {
+  .Dollar h1 {
+    margin-left: -300px;
     margin-top: -8px;
   }
-  
-  .para{
-    margin-left: 40px;
 
-  }
-
-#last{
-    font-weight: bold;
 }
-  /* MEDIA QUIERIES */
-  
-  /* Iphone xr */
 
-  @media only screen and (max-width: 414px) {
-    .Dollar h1{
-        margin-left: -300px;
-        margin-top: -8px;
-      }
-
+/* iPad Mini (768x1024 pixels) */
+@media only screen and (max-width: 768px) {
+  .reviews-container {
+    width: 60vh;
   }
-  /* iPad Mini (768x1024 pixels) */
-  @media only screen and (max-width: 768px) {
-    .reviews-container {
-      width: 60vh;
-    }
-  
-  
-    .money {
-      font-weight: bold;
-      margin-left: -630px;
-      margin-top: -8px;
-    }
-  
-    #last{
-        text-decoration: none;
-    }
-    .first-three-titles p {
-      margin-top: 15px;
-      margin-bottom: 15px;
-      margin-left: 3%;
-      font-size: 16px;
-    }
-  
-    .first-three-titles h2 {
-      margin-left: 3%;
-      font-size: 20px;
-    }
-  
-    .first-part #your-transaction-30days {
-      margin-left: auto;
-      font-size: 16px;
-      margin-right: 5%;
-      /* margin-top: 26px; */
-    }
-  
-    .first-part h4 {
-      font-size: 18px;
-      margin-left: 3%;
-      margin-top: 20px;
-      padding: 5px 5px 5px 5px;
-    }
-  
-    .inner-div {
-      margin-top: 20px;
-      padding: 12px;
-      max-width: 720px;
-      font-size: 20px;
-    }
-  
-    .inner-div p {
-      margin-left: auto;
-      margin-right: 3%;
-    }
-  
-    .inner-div h3 {
-      margin-top: 7px;
-      margin-left: 20px;
-    }
 
-
+  .money {
+    font-weight: bold;
+    margin-left: -630px;
+    margin-top: -8px;
   }
-  
-  
-  /* Kundie's css */
-  
-  
-  * {
-    margin: 0;
-    padding: 0;
+
+  #last {
     text-decoration: none;
   }
-  
+
+  .first-three-titles p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 3%;
+    font-size: 16px;
+  }
+
+  .first-three-titles h2 {
+    margin-left: 3%;
+    font-size: 20px;
+  }
+
+  .first-part #your-transaction-30days {
+    margin-left: auto;
+    font-size: 16px;
+    margin-right: 5%;
+    /* margin-top: 26px; */
+  }
+
+  .first-part h4 {
+    font-size: 18px;
+    margin-left: 3%;
+    margin-top: 20px;
+    padding: 5px 5px 5px 5px;
+  }
+
+  .inner-div {
+    margin-top: 20px;
+    padding: 12px;
+    max-width: 720px;
+    font-size: 20px;
+  }
+
+  .inner-div p {
+    margin-left: auto;
+    margin-right: 3%;
+  }
+
+  .inner-div h3 {
+    margin-top: 7px;
+    margin-left: 20px;
+  }
+
+
+}
+
+/* Kundie's css */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.reviews-container {
+  color: #333232;
+  width: 100vh;
+  margin: auto;
+}
+
+.overall-rating {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.5rem;
+}
+
+.rating-number {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.total-reviews {
+  margin-left: 435px;
+  text-wrap: wrap;
+  font-size: 16px;
+}
+
+.htwo {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+.days {
+  opacity: 0.8;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.day {
+  opacity: 0.5;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#starrs {
+  color: #f39c12;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.rating-bar {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-bar-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#rstars,
+#lines {
+  width: 15%;
+  text-align: left;
+}
+
+#lines {
+  text-align: right;
+}
+
+.bar-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bar {
+  width: 70%;
+  height: 8px;
+  background-color: rgba(185, 185, 185, 1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background-color: #f39c12;
+}
+
+.reviews-list {
+  border-top: 1px solid rgb(212, 212, 212);
+  padding-top: 1rem;
+}
+
+.review-item {
+
+  margin-bottom: 1rem;
+  border: none;
+
+}
+
+.review-header {
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+
+}
+
+.reviewer-name {
+  font-weight: bold;
+}
+
+.review-date {
+  color: #888;
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+.review-stars {
+
+  color: #f39c12;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  border-top: 1px solid rgb(212, 212, 212);
+  padding: 20px 0px;
+}
+
+.review-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+
+}
+
+.par {
+  border-bottom: 1px solid rgb(212, 212, 212);
+  padding: 20px 0px;
+}
+
+
+@media only screen and (max-width: 768px) {
   .reviews-container {
-    color: #333232;
-    width: 100vh;
-    margin: auto;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0;
   }
-  
+
+  .htwo {
+    font-size: 28px;
+    margin-top: 25px;
+  }
+
+  .days,
+  .day {
+    font-size: 18px;
+  }
+
   .overall-rating {
-    display: flex;
-    align-items: baseline;
-    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
   }
-  
+
   .rating-number {
     font-size: 3rem;
-    font-weight: bold;
+    margin-left: 25px;
   }
-  
-  .total-reviews {
-    margin-left: 435px;
-    text-wrap: wrap;
-    font-size: 16px;
-  }
-  
-  .htwo {
-    font-size: 32px;
-    font-weight: 700;
-    margin-top: 50px;
-  }
-  
-  .days {
-    opacity: 0.8;
-    font-weight: 700;
-    font-size: 16px;
-    text-decoration: underline;
-  }
-  
-  .day {
-    opacity: 0.5;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
-  }
-  
-  #starrs {
-    color: #f39c12;
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-  }
-  
-  .rating-bar {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .rating-bar-line {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  #rstars,
-  #lines {
-    width: 15%;
-    text-align: left;
-  }
-  
-  #lines {
-    text-align: right;
-  }
-  
-  .bar-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .bar {
-    width: 70%;
-    height: 8px;
-    background-color: rgba(185, 185, 185, 1);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .fill {
-    height: 100%;
-    background-color: #f39c12;
-  }
-  
-  .reviews-list {
-    border-top: 1px solid rgb(212, 212, 212);
-    padding-top: 1rem;
-  }
-  
-  .review-item {
-  
-    margin-bottom: 1rem;
-    border: none;
-  
-  }
-  
-  .review-header {
-  
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-  
-  }
-  
-  .reviewer-name {
-    font-weight: bold;
-  }
-  
-  .review-date {
-    color: #888;
-    font-size: 16px;
-    font-weight: 600;
-  
-  }
-  
-  .review-stars {
-  
-    color: #f39c12;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
+
   .stars {
-    border-top: 1px solid rgb(212, 212, 212);
-    padding: 20px 0px;
+    font-size: 1.5rem;
   }
-  
+
+  .rating-bar {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .rating-bar-line {
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  #rstars {
+    margin-left: 40px;
+  }
+
+  #lines {
+    width: auto;
+    flex: 0 0 20%;
+    margin-right: 80px;
+    /* text-align: left; */
+  }
+
+  .bar {
+    width: 60vh;
+    margin-left: 80px;
+  }
+
+  .reviews-list {
+    padding-top: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .review-item {
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+
+  #starrs {
+    color: orange;
+  }
+
+  .review-header {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+
+  .total-reviews {
+    margin-left: 400px;
+    font-size: 25px;
+  }
+
+  .reviewer-name {
+    font-size: 16px;
+  }
+
+  .review-date {
+    font-size: 14px;
+  }
+
+  .review-stars {
+    font-size: 1.2rem;
+    margin-left: 20px;
+  }
+
   .review-text {
     font-size: 16px;
-    font-weight: 700;
-    color: #333;
-  
+    width: 70vh;
   }
-  
+
+  .stars {
+    padding: 12px 0px;
+  }
+
   .par {
-    border-bottom: 1px solid rgb(212, 212, 212);
-    padding: 20px 0px;
+    margin-bottom: 55px;
   }
-
-  
-  @media only screen and (max-width: 768px) {
-    .reviews-container {
-      max-width: 100%;
-      padding: 0 20px;
-      margin: 0;
-    }
-  
-    .htwo {
-      font-size: 28px;
-      margin-top: 25px;
-    }
-  
-    .days,
-    .day {
-      font-size: 18px;
-    }
-  
-    .overall-rating {
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 15px;
-    }
-  
-    .rating-number {
-      font-size: 3rem;
-      margin-left: 25px;
-    }
-  
-    .stars {
-      font-size: 1.5rem;
-    }
-  
-    .rating-bar {
-      margin-top: 15px;
-      margin-bottom: 15px;
-      width: 100%;
-      padding: 0;
-    }
-  
-    .rating-bar-line {
-      justify-content: space-evenly;
-      width: 100%;
-      margin-bottom: 12px;
-    }
-  
-    #rstars{
-        margin-left: 40px;
-    }
-    #lines {
-      width: auto;
-      flex: 0 0 20%;
-      margin-right: 80px;
-      /* text-align: left; */
-    }
-  
- .bar{
-width: 60vh;
-margin-left: 80px;
- }
-    .reviews-list {
-      padding-top: 1rem;
-      margin-left: 0;
-      margin-right: 0;
-    }
-  
-    .review-item {
-      margin-bottom: 1rem;
-      padding: 0;
-    }
-  #starrs{
-color: orange;
-  }
-    .review-header {
-      flex-direction: row;
-      justify-content: space-between;
-      margin-bottom: 0.8rem;
-    }
-  
-    .total-reviews {
-      margin-left: 400px;
-      font-size: 25px;
-    }
-  
-    .reviewer-name {
-      font-size: 16px;
-    }
-  
-    .review-date {
-      font-size: 14px;
-    }
-  
-    .review-stars {
-      font-size: 1.2rem;
-      margin-left: 20px;
-    }
-  
-    .review-text {
-      font-size: 16px;
-  width: 70vh;
-    }
-  
-    .stars {
-      padding: 12px 0px;
-    }
-  
-    .par {
-      margin-bottom: 55px;
-    }
-  }
+}
 
 
-  .van-popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  .van-popup {
-    background-color: white;
-    width: 400px;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-  }
-  
-  .van-popup-header {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-  }
-  
-  .back-to-vans {
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .van-popup-content {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .popup-van-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-  }
-  
-  .van-details-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
-  .van-simple-btn {
-    background-color: orange;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  .van-name {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .van-price {
-    color: gray;
-  }
-  
+.van-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.van-popup {
+  background-color: white;
+  width: 500px;
+  /* height: 60vh; */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.van-popup-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.back-to-vans {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.van-popup-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-van-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.van-details-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.van-simple-btn {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.van-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.van-price {
+  color: gray;
+}
